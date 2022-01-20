@@ -28,7 +28,7 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  return 'str'
+  return str;
 
 }
 
@@ -157,7 +157,15 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  return Math.round (num);
+  var resto = num % 1,
+  var entero = num - resto;
+  if (resto >= 0.5) {
+    return entero +1;
+  }
+  else { 
+    return entero;
+  }
+  return Math.round(num);
   
 }
 
@@ -204,7 +212,7 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  var combinar = nombre + '' + apellido;
+  var combinar = nombre + "" + apellido;
   return combinar; 
   
 }
@@ -213,7 +221,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return 'Hola' + nombre + '!';
+  return "Hola" + nombre + "!";
 
 
   
@@ -260,7 +268,7 @@ function esVocal(letra){
   if (letra.length > 1) {
     return "Dato Incorrecto"
   }
-  if (letra === a, letra === e, letra === i, letra === o, letra === u) {
+  if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
     return "Es vocal";
   }
   else {
